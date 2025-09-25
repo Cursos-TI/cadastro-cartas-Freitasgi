@@ -16,8 +16,8 @@ int main() {
   int pontosturisticos1;
 
   char estado2;
-  char codigo2;
-  char cidade2;
+  char codigo2[5];
+  char cidade2[30];
   int populaçao2;
   float area2;
   float pib2;
