@@ -27,13 +27,13 @@ int main() {
 
   printf("Carta 1:\n");
   printf("Informe o estado (A-H): \n");
-  scanf("%c", &estado1);
+  scanf(" %c", &estado1);
 
   printf("Informe o código da carta (ex. A01, B02): \n");
-  scanf("%s", &codigo1);
+  scanf("%s", codigo1);
 
   printf("Informe o nome da cidade: \n");
-  scanf("%s", &cidade1);
+  scanf("%s", cidade1);
 
   printf("Informe o número de habitantes da cidade: \n");
   scanf("%d", &populaçao1);
@@ -49,13 +49,13 @@ int main() {
 
   printf("Carta 2:\n");
   printf("Informe o estado (A-H): \n");
-  scanf("%c", &estado2);
+  scanf(" %c", &estado2);
 
   printf("Informe o código da carta (ex. A01, B02): \n");
-  scanf("%s", &codigo2);
+  scanf("%s", codigo2);
 
   printf("Informe o nome da cidade: \n");
-  scanf("%s", &cidade2);
+  scanf("%s", cidade2);
 
   printf("Informe o número de habitantes da cidade: \n");
   scanf("%d", &populaçao2);
@@ -63,7 +63,7 @@ int main() {
   printf("Informe a área da cidade em km²: \n");
   scanf("%f", &area2);
 
-  print("Informe o PIB da cidade: \n");
+  printf("Informe o PIB da cidade: \n");
   scanf("%f", &pib2);
 
   printf("Informe a quantidade de pontos turísticos da cidade: \n");
@@ -90,4 +90,5 @@ int main() {
   printf("Número de Pontos Turísticos: %d\n", pontosturisticos2);
 
 return 0;
+
 } 
