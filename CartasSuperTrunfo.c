@@ -37,6 +37,7 @@ int main() {
   // Carta 2
   printf("Carta 2:\n");
   printf("Informe o estado (A-H): \n");
+  getchar();
   scanf("%c", &estado2);
 
   printf("Informe o código da carta (ex. A01, B02): \n");
@@ -57,13 +58,18 @@ int main() {
   printf("Informe a quantidade de pontos turísticos da cidade: \n");
   scanf("%d", &pontosturisticos2);
 
-  // Operadores aritméticos
-  //Carta 1
+  //Calculo Densidade Populacional e PIB Per Capita
   densidade1 = (float) populaçao1 / area1;
   pibpercapita1 = (float) pib1 / populaçao1;
-  //Carta2
+
   densidade2 = (float) populaçao2 / area2;
   pibpercapita2 = (float) pib2 / populaçao2;
+
+  //Calculo Super Poder
+  float superPoder1, superPoder2;
+
+  superPoder1 = (float)populaçao1 + area1 + pib1 + pibpercapita1 + pontosturisticos1 + (1 / densidade1);
+  superPoder2 = (float)populaçao2 + area2 + pib2 + pibpercapita2 + pontosturisticos2 + (1 / densidade2);
 
   // Saída de dados
   printf("Carta 1:\n");
@@ -76,6 +82,7 @@ int main() {
   printf("Número de Pontos Turísticos: %d\n", pontosturisticos1);
   printf("Densidade Populacional: %.2f\n", densidade1);
   printf("PIB Per Capita: %.2f\n", pibpercapita1);
+  printf("Super Poder: %.2f\n", superPoder1);
 
   printf("Carta 2:\n");
   printf("Estado: %c\n", estado2);
@@ -87,7 +94,28 @@ int main() {
   printf("Número de Pontos Turísticos: %d\n", pontosturisticos2);
   printf("Densidade Populacional: %.2f\n", densidade2);
   printf("PIB Per Capita: %.2f\n", pibpercapita2);
+  printf("Super Poder: %.2f\n", superPoder2);
 
-return 0;
+  //Comparação cartas
+  int populaçao, area, pib, pontosTuristicos, densidade, pibPerCapita, superPoder;
+
+  populaçao = populaçao1 > populaçao2;
+  area = area1 > area2;
+  pib = pib1 > pib2;
+  pontosTuristicos = pontosturisticos1 > pontosturisticos2;
+  densidade = densidade1 < densidade2;
+  pibPerCapita = pibpercapita1 > pibpercapita2;
+  superPoder = superPoder1 > superPoder2;
+
+  printf("Comparação das cartas:\n");
+  printf("População: %d\n", populaçao);
+  printf("Área: %d\n", area);
+  printf("PIB: %d\n", pib);
+  printf("Pontos Turísticos: %d\n", pontosTuristicos);
+  printf("Densidade Populacional: %d\n", densidade);
+  printf("PIB Per Capita: %d\n", pibPerCapita);
+  printf("Super Poder: %d\n", superPoder);
+
+  return 0;
 
 } 
